@@ -1,4 +1,3 @@
-import json
 from typing import Any, Dict
 
 import dateutil.parser
@@ -19,6 +18,9 @@ GET_DATA_FOR_DISCORD_ACCOUNT_QUERY = gql(
             owner {
               id
               username
+              githubAccounts {
+                username
+              }
             }
             bot {
               id
@@ -81,6 +83,12 @@ def render_user_embed(data: Dict[str, Any]) -> discord.Embed:
     embed.title = data["username"]
     embed.url = f"https://grackdb.fogo.sh/user/{data['username']}"
     embed.colour = discord.Colour.gold()
+
+    if githubAccount := next(iter(data["githubAccounts"]), None):
+        embed.add_field(
+            name="GitHub",
+            value=f"[{githubAccount['username']}](https://github.com/{githubAccount['username']})",
+        )
     return embed
 
 
