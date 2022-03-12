@@ -10,6 +10,8 @@ click==8.0.4
     # via
     #   black
     #   pip-tools
+isort==5.10.1
+    # via -r dev_requirements.in
 mypy-extensions==0.4.3
     # via black
 pathspec==0.9.0
