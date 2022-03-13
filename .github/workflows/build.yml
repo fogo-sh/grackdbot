@@ -7,7 +7,7 @@ jobs:
   build:
     name: Publish to GHCR
     env:
-      IMAGE: fogo-sh/grackdbot
+      IMAGE: ghcr.io/fogo-sh/grackdbot
     runs-on: ubuntu-latest
     permissions:
       packages: write
