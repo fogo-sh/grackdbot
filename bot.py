@@ -102,7 +102,7 @@ async def lookup(interaction: discord.Interaction, user: discord.User):
 
         if len(resp["discordAccounts"]["edges"]) == 0:
             embed = discord.Embed(
-                description="That account could not be found in GrackDB"
+                description="That account could not be found in GrackDB."
             )
             embed.colour = discord.Colour.red()
             await interaction.response.send_message(embed=embed)
