@@ -9,6 +9,9 @@ jobs:
     env:
       IMAGE: fogo-sh/grackdbot
     runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
     steps:
       - name: Generate build ID
         id: prep
