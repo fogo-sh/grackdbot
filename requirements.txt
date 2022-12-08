@@ -16,7 +16,7 @@ attrs==21.4.0
     # via aiohttp
 botocore==1.24.18
     # via gql
-certifi==2021.10.8
+certifi==2022.12.7
     # via requests
 charset-normalizer==2.0.12
     # via
