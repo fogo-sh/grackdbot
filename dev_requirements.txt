@@ -24,7 +24,7 @@ platformdirs==2.5.1
     # via black
 tomli==2.0.1
     # via black
-wheel==0.37.1
+wheel==0.38.1
     # via pip-tools
 
 # The following packages are considered to be unsafe in a requirements file:
